@@ -1,9 +1,9 @@
 body{ 
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 #hero {
     min-height: 100vh;
     background: #141E30;
@@ -13,3 +13,23 @@ body{
     background: linear-gradient(to right, #243B55, #141E30);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+/*Use this if i'm ever building a UI that allows image uploads*/
+.square-img-container{
+position: relative; /*determines position based on parent element*/
+}
+
+.square-img{/*This will repace image fluid*/
+    position: absolute;
+    width: 100%;
+    height: 100%; /*the image will fill 100% of the container*/
+    object-fit: cover;/*image will be as large as possible without stretching*/
+    object-position: top;
+}
+
+.square-img-container::after{
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+/**/
